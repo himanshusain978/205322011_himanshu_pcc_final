@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/coder2.jpg">
+        <h1 id="current-time " onclick="sum()"> <span id="time"></span> </h1>
+        <h3>Increment: <span id="count">0</span></h3>
+        
+        <div class="quotes">
+
+            
+        </div>
+
+    </div>
+    
+</body>
+<script type="">
+    setInterval(updateTime, 1000);
+    function updateTime(){
+        time.innerHTML=new Date();
+    }
+    let count=0;
+    const d= new Date();
+    function sum(){
+        count++;
+        updateIncrement();
+        updateColor();
+        updatebackground();
+    }
+    function updateIncrement(){
+        document.getElementById("count").innerHTML = count;
+    }
+    function updateColor(){
+
+        if(count%2===0){
+            document.getElementById("current-time").style.color = "green";
+        }
+        else
+            document.getElementById("current-time").style.color="red";
+    }
+    document.getElementById("current-time").innerHTML = d;
+    document.getElementById("current-time").style.color = "black";
+
+
+
+    
+</script>
+</html>
